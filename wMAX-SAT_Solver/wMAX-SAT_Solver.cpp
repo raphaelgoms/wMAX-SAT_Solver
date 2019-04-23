@@ -4,22 +4,17 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
+#include "GreedyHeuristic.h"
+
 using namespace std;
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-	cout << argv[1] << endl;
+	InstanceIO* io = new InstanceIO();
+	INSTANCE instance = io->loadInstance(argv[1]);
 
-	string line;
-	ifstream readfile;
-	readfile.open(argv[1]);
+	GreedyHeuristic* construtor = new GreedyHeuristic(instance);
 
-	if (readfile.is_open())
-	{
-		while (getline(readfile, line))
-			cout << line << endl;
-		readfile.close();
-	}
-	else
-		cout << "Impossível abrir o arquivo.";
+	bool* solution = construtor->BuildASolution(); // Constroi uma solução 
 }

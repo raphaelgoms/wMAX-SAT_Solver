@@ -151,7 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdaptiveGreedyHeuristic.cpp" />
+    <ClCompile Include="AdaptiveSemiGreedyHeuristic.cpp" />
+    <ClCompile Include="GreedyHeuristic.cpp" />
+    <ClCompile Include="InstanceIO.cpp" />
+    <ClCompile Include="SolutionBuilder.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="wMAX-SAT_Solver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdaptiveGreedyHeuristic.h" />
+    <ClInclude Include="AdaptiveSemiGreedyHeuristic.h" />
+    <ClInclude Include="GreedyHeuristic.h" />
+    <ClInclude Include="InstanceIO.h" />
+    <ClInclude Include="SolutionBuilder.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
